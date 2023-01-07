@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="estilo.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <section class="home">
+    <div class="in-fle"></div>
+    <div class="in-flex">
+        <div>
+          <center class="pato">
+            <h1>¿QUE ES TERMUx?</h1>
+            <div>
+          <p>TERMUX, UN TERMINAL PARA ANDROID POTENTE Y ESPECTACULAR
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQve9A3jDJUHYbvH1xpczqJaw-H4nzRXh-K5Q&usqp=CAU">
+          </p>
+          </div>
+          <div>
+          <p>Al instalar Termux en tu móvil, dispondrás de un emulador de terminal para Android con un sistema base mínimo, pero que es fácilmente ampliable mediante el gestor de paquetes APT. Este gestor de paquetes es el que utilizan las distribuciones derivadas de Debian. Con lo que fácilmente podrás instalar los paquetes mas habituales en este emulador de terminal para Android.</p>
+          </div>
+          </center>
+        </div>
+        <div>
+          <h1>CARACTERÍSTICAS DE TERMUX</h1>
+          <div>
+            Las principales características de este emulador de terminal para Android son las siguientes,
+            <div>
+            seguro permite acceder a servidores remotos utilizando el cliente de OpenSSH. De la misma manera también te permite crear un servidor ssh, con el que conectarte a este terminal.
+            <div>
+              Termux te permite elegir entre diferentes shell, ya sea Bash, fish, zsh, al igual que también te permite seleccionar tu editor preferido, nano, emacs, vim. Igualmente puedes utilizar herramientas como curl, o wget para realizar descargas directamente desde el terminal. O incluso, también puedes realizar copias de seguridad utilizando rsync.
+            </div>
+            <div>
+              Es altamente personalizable, puesto que como te he indicado anteriormente, puedes instalar lo que necesites utilizando el gestor de paquetes APT.
+Con herramientas realmente potentes que te permitirán hacer prácticamente cualquier cosa que te imagines. Termux dispone de versiones actualizadas de Perl, Python, Ruby y Node.js.
+El único inconveniente que le puedes encontrar, es que resulta incómodo utilizar el teclado en la pantalla del móvil. Esto tiene varias soluciones como puede ser el uso de un teclado vía bluetoth o incluso WiFi keyboard. Este último te permite escribir utilizando el teclado del ordenador, pero enviando lo que escribes directamente al móvil.
+            </div>
+            </div>
+              <h1>USO Y FUNCION</h1><div>
+                Una vez instalado Termux, dispondrás de un sistema básico que consiste en el gestor de paquetes APT y la colección de herramientas busybox. Puedes instalar mas paquetes utilizando el gestor de paquetes.
+                Para los que no conozcais el uso de APT, unas nociones básicas,
+                <div>
+                  <li>apt update. Actualiza la lista de paquetes disponibles.</li>
+                  <div>
+                  <li>apt search [loquesea]. Permite buscar entre los diferentes paquetes que hay disponibles.</li>
+                  <div>
+                    <li>
+                      apt install [paquete] . Para instalar un paquete.
+                    </li>
+                    <div>
+                      <li>
+                        apt upgrade. Para actualizar todos los paquetes que estén desfasados, y que dispongan de una versión mas actualizada de la que tenemos instalada.
+                      </li>
+                      <div>
+                        <li>
+                          apt show [paquete]. Muestra información relevante sobre un paquete.
+                        </li>
+                        <div>
+                          <li>
+                            apt list. Lista todos los paquetes disponibles.
+                          </li> 
+                          <div>
+                            <li>
+                              apt list –installed . Lista todos los paquetes instalados en el sistema.
+                            </li>
+                            <div>
+                              <li>
+                                apt remove [paquete]. Permite quitar un paquete instalado en el sistema.
+                              </li>
+                            </div>
+                            <div>
+                              ALGUNOS PAQUETES QUE TENDRÁS DISPONIBLES EN TERMUX TU TERMINAL PARA ANDROID
+                            </div>
+                          </div>
+                          <div>
+                            <p>Como he comentado, una vez instalado Termux tienes disponible el gestor de paquetes APT y BusyBox (para quien no conozca este término, son un conjunto de utilidades estándar).
+
+                              Entre las utilidades estándar que nos encontramos está vi y versiones ligeras de cp, mv, ls, tar, wget. Para ver un listado completo de todas las herramientas solo tienes que ejecutar el comando,
+                              
+                              busybox –help
+                              Si quieres la versión completa de estas herramientas ejecuta la siguiente orden en Termux,
+                              
+                              apt install coreutils
+                              Mientras que para las otras herramientas mencionadas arriba tienes que ejecutar,
+                              
+                              apt install wget
+                              o bien,
+                              
+                              apt install tar
+                              Existen alternativas a wget como aria2c, curl y lftp</p>
+                          </div>
+                          <h1>CONFIGURAR EL TERMINAL</h1>
+                            <li>El terminal Termux puede ser configurando creando un archivo ~/.termux/termux.properties. Alguna de las opciones que puedes personalizar con este archivo son,</li>
+                           <li>Gestión del carácter de campana. Nos permite personalizar que es lo que hace cuando utilizamos la combinación Ctrl+G. Las opciones son o vibrar, o emitir un sonido o no hacer nada,bell-character=vibrate
+                            bell-character=beep
+                            bell-character=ignore</li>
+                            <li>Gestión de la tecla retroceso. Al igual que pasa con el carácter campana, mediante la configuración, podemos fijar el comportamiento de la tecla retroceso, para que se comporte o bien como escape o como retrocesoback-key=escape
+                              back-key=back</li>
+                              <div>
+                            <h1>ALMACENAMIENTO</h1>
+                            <p>Para que todo funcione como toca en lo que se refiere al almacenamiento tanto interno como externo, el primer paso que debes hacer, es ejecutar la siguiente orden,
+
+                              termux-setup-storage
+                              De esta forma nos aseguramos que,</p>
+                              </div>
+                              <div><li>Tenemos permisos para acceder al almacenamiento compartido.</li></div>
+                              <div><li>Se crea un directorio en el almacenamiento externo (en caso de que exista).</li></div>
+                              <div><li>Se crea un directorio $HOME/storage</li></div>
+                              <div><h1>UTILIZANDO SSH</h1></div>
+                              <div><p>Con Termux tienes sin lugar a dudas un verdadero terminal para Android. Ya que te permite disponer de un cliente y un servidor SSH. Con lo que no necesitarás de otras aplicaciones.
+
+                                Para hacer uso del cliente y del servidor tienes que instalar el paquete openssh. Para ello, ejecuta la siguiente orden,
+                                
+                                apt install openssh
+                                Una vez instalado ya puedes utilizar tanto el cliente como el servidor. En el caso del cliente, puedes utilizar un script llamado ssha que te permite conectarte sin contraseñas.
+                                
+                                El servidor SSH se inicia con la orden sshd y utiliza el puerto 8022. El inconveniente es que no funciona mediante contraseñas, sino que tienes que utilizar claves autorizadas.</p></div>
+                        </div>
+                        <div><h1>CONCLUSIÓN</h1></div>
+                        <p>Como puedes ver el potencial que ofrece Termux es brutal, permitiéndote que hagas casi cualquier cosa de las que haces en tu terminal de tu distribución favorita.
+
+                          Sin embargo, esto no es todo. Termux dispone de un conjunto de complementos que te permite extender el funcionamiento de esta APP mucho mas allá de lo que puedas imaginar.
+                          
+                          Esto lo dejaré para un segundo artículo sobre Termux, donde explicaré con detalle todas esos complementos.</p>
+                    </div>
+                  </div>
+                  </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+    </div>
+    <div>
+  </div>
+  </section>
+</body>
+</html>
